@@ -76,51 +76,56 @@ th,td{
     /*border: 1px solid black;*/
 }
 
-/* Website Banner Container */
+/* Container for the entire header */
 .banner {
-  position: relative; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   font-family: 'Roboto Slab', serif;
-  width: 100%;            /* Ensure container stays within screen */
-  overflow: hidden;       /* Clip any accidental overflow */
+  background: #fafafa;
 }
 
-/* Header Background/Text */
+/* Top Title Section */
 .top {
-  font-size: clamp(1.5rem, 5vw, 5.33rem); /* Dynamically scales font based on screen size */
-  color: #505050; 
-  background: #fafafa; 
-  text-align: center; 
-  width: 100%;            /* Changed from 2000px to 100% */
-  height: auto;           /* Let height adjust to content */
-  padding: 20px 0;        /* Use padding instead of absolute positioning for better flow */
-  position: relative;     /* Relative keeps it at the top without overlapping content below */
+  width: 100%;
+  padding: 2rem 1rem;
+  text-align: center;
+  background: #fafafa;
+  /* Scales font between 1.8rem (mobile) and 4rem (laptop) */
+  font-size: clamp(1.8rem, 5vw, 4rem); 
 }
 
-/* Image scaling */
-.banner img {
-  width: 100%;            /* Fits the image to the screen width */
-  height: auto;           /* Maintains aspect ratio */
+/* Image Wrapper to ensure it stays contained */
+.banner-image-container {
+  width: 100%;
+  position: relative;
+  line-height: 0; /* Removes tiny gap under images */
+}
+
+.banner-image-container img {
+  width: 100%;
+  height: auto;
   display: block;
 }
 
-/* Bottom-right text (Date/Venue) */
+/* Overlay text (Date & School) */
 .bottom-right {
-  font-size: clamp(1rem, 3vw, 2.33rem); /* Scales for mobile */
-  color: #fafafa; 
-  line-height: 1.2em; 
-  width: 90%;             /* Prevents text from hitting the very edge */
-  padding: 10px;
-  text-align: right; 
-  position: absolute; 
-  bottom: 10px;           /* Adjusted for better mobile clearance */
-  right: 10px; 
-  text-shadow: 0px 0px 6px #000000;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  padding: 1rem;
+  text-align: right;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7)); /* Makes text readable over image */
+  color: #fafafa;
+  font-size: clamp(0.9rem, 2vw, 1.8rem);
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
 }
 
-/* Title Styling */
-.title1 { color: #b2132e; text-shadow: 1px 1px 3px #c0c0c0; } 
-.title2 { color: #52739e; text-shadow: 1px 1px 3px #c0c0c0; }
-.year { color: #505050; font-size: 0.7em; font-weight: lighter; }
+/* Title Color Logic */
+.title1 { color: #b2132e; } 
+.title2 { color: #52739e; }
 
 /* Navigation Links (Home, Registration, etc) */
 table.navigation{width:800px;}
