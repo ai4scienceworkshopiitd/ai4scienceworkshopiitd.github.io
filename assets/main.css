@@ -76,56 +76,71 @@ th,td{
     /*border: 1px solid black;*/
 }
 
-/* Container for the entire header */
+/* ===== Website Banner ===== */
 .banner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  font-family: 'Roboto Slab', serif;
-  background: #fafafa;
-}
-
-/* Top Title Section */
-.top {
-  width: 100%;
-  padding: 2rem 1rem;
-  text-align: center;
-  background: #fafafa;
-  /* Scales font between 1.8rem (mobile) and 4rem (laptop) */
-  font-size: clamp(1.8rem, 5vw, 4rem); 
-}
-
-/* Image Wrapper to ensure it stays contained */
-.banner-image-container {
-  width: 100%;
   position: relative;
-  line-height: 0; /* Removes tiny gap under images */
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  font-family: 'Roboto Slab', serif;
 }
 
-.banner-image-container img {
+/* Banner Image */
+.banner img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* Overlay text (Date & School) */
+/* ===== Conference Title (Top Overlay) ===== */
+.top-left {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 2rem 1rem;
+
+  text-align: center;
+  background: rgba(250, 250, 250, 0.9);
+
+  font-size: clamp(2rem, 5vw, 5.3rem);
+  line-height: 1.1;
+  color: #505050;
+}
+
+/* ===== Bottom Right Overlay (Date / Venue) ===== */
 .bottom-right {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 100%;
-  padding: 1rem;
+
+  padding: 1.2rem 1.5rem;
   text-align: right;
-  background: linear-gradient(transparent, rgba(0,0,0,0.7)); /* Makes text readable over image */
+
+  font-size: clamp(1rem, 2vw, 2.3rem);
+  line-height: 1.4;
+
   color: #fafafa;
-  font-size: clamp(0.9rem, 2vw, 1.8rem);
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+
+  text-shadow: 0 0 6px rgba(0,0,0,0.9);
 }
 
-/* Title Color Logic */
-.title1 { color: #b2132e; } 
-.title2 { color: #52739e; }
+/* ===== Title Colors ===== */
+.title1 {
+  color: #b2132e;
+  text-shadow: 1px 1px 3px #c0c0c0;
+}
+
+.title2 {
+  color: #52739e;
+  text-shadow: 1px 1px 3px #c0c0c0;
+}
 
 /* Navigation Links (Home, Registration, etc) */
 table.navigation{width:800px;}
