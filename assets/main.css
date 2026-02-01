@@ -143,7 +143,10 @@ th,td{
 }
 
 /* Navigation Links (Home, Registration, etc) */
-table.navigation{width:800px;}
+table.navigation {
+    table-layout: fixed;
+    width: 100%;
+}
 td.navigation{font-size:1.67em; white-space:nowrap; width:20%; text-align:center; vertical-align:middle; padding:0px 0px 0px 0px;}
 
 /* Sponsor Images */
