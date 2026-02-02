@@ -53,12 +53,12 @@ h1{font-size:2.67em;}
 h2{font-size:2.00em;}
 h3{font-size:1.67em;}
 h4{font-size:1.33em;}
-li a, p a {text-decoration:underline; text-decoration-color:#b8860b;}
 ul {
     list-style: none;
     margin: 24px auto;
     padding: 0;
     max-width: 800px;
+    font-size: 1.25rem;
 }
 i,em{font-style:italic;}
 b,strong{font-weight:bold;}
@@ -116,7 +116,7 @@ th,td{
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
 
   text-align: center;
   background: rgba(250, 250, 250, 0.6);
@@ -296,6 +296,21 @@ footer {
     td.date {
         font-size: 0.85rem;
         padding-right: 0.5rem;
+    }
+
+    .top-left {
+        /* Make the box distinct */
+        background: rgba(255, 255, 255, 0.85); 
+        padding: 0.5rem;
+        
+        /* Adjust positioning for small screens */
+        top: 50%; 
+        transform: translate(-50%, -100%); /* Center it perfectly */
+        
+        /* Smaller font for iPhone SE */
+        font-size: 1.5rem; 
+        width: 85%; /* Don't touch the edges */
+        border-radius: 8px;
     }
 }
 
