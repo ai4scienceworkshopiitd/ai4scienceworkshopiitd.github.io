@@ -217,7 +217,7 @@ td.title,
 td.title-special {
     vertical-align: middle;
 }
-td.speaker{padding: 4px 12px 4px 4px; font-style: italic; font-size:1em; max-height:999999px}
+td.speaker{padding: 4px 12px 4px 4px; font-size:1em; max-height:999999px}
 td.speaker:empty {
     padding: 0;
     height: 0;
