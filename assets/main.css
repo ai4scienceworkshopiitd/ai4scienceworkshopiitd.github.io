@@ -178,21 +178,22 @@ td.sponsor img{width: 100%}
 
 /* The Table on the Program Page */
 td.room{padding: 4px 12px 4px 4px; width: 90%; vertical-align:bottom; font-size:1.67em; color: #52739e; height:32px;}
+
 td.date {
     white-space: nowrap;
-    width: 130px;
+    width: 140px;
     text-align: right;
+    vertical-align: middle; 
+    padding: 8px 20px 0 0; 
     
-    /* CHANGE: Align top so it matches the start of the title */
-    vertical-align: top; 
-    
-    /* CHANGE: Add top padding to align the text baseline with the Title */
-    padding: 8px 16px 0 0; 
-    
-    font-size: 0.95rem;
-    line-height: 1.4;
-    color: #666;
+    /* Improvements */
+    font-size: 1.1rem;      /* Larger for readability */
+    font-weight: 700;       /* Bold to anchor the row */
+    color: #333;            /* Darker color for better contrast */
+    font-family: 'Roboto Slab', serif; /* Matching your headings */
+    letter-spacing: 0.5px;
 }
+
 td.title,
 td.title-special {
     padding: 4px 12px 2px 4px;
@@ -202,9 +203,6 @@ td.title-special {
     font-family: 'Roboto Slab', serif;
 
     height: auto;
-}
-td.date {
-    padding-top: 0.15em;
 }
 td.title {
     color: #813c54;
@@ -313,4 +311,3 @@ footer {
         border-radius: 8px;
     }
 }
-
