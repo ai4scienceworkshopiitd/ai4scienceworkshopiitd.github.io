@@ -38,6 +38,15 @@ p + p {
     margin-top: 0; 
 }
 
+.note-text {
+    font-size: 1.1rem;
+    text-align: center;
+    padding-left: 0 !important; /* Overrides your general 'p' padding */
+    text-align: center;
+    margin: 1rem auto;
+    color: #666;
+}
+
 a{color: #b8860b; text-decoration:none;}
 a.current{color: #52739e;}
 a.current:hover{color: #e82945;}
@@ -279,6 +288,11 @@ footer {
         font-size: 1rem;
         line-height: 1.7;
         padding-left: 0;
+    }
+
+    .note-text {
+        font-size: 0.85rem !important;
+        padding: 0 15px;
     }
 
     nav.navigation {
