@@ -1,11 +1,6 @@
-/* main.css */
-
-*{
+* {
     margin: 0;
     padding: 0;
-    border: 0;
-    font: inherit;
-    vertical-align: baseline;
 }
 
 body {
@@ -42,7 +37,6 @@ p + p {
     font-size: 1.1rem;
     text-align: center;
     padding-left: 0 !important; /* Overrides your general 'p' padding */
-    text-align: center;
     margin: 1rem auto;
     color: #666;
 }
@@ -53,7 +47,6 @@ a.current:hover{color: #e82945;}
 a:hover{color: #b2132e;}
 a:active{color: #e82945;}
 h1, h2, h3, h4 {
-    clear: left;
     color: #813c54;
     margin: 1.5em 0 1em;
     font-family: 'Roboto Slab', serif;
@@ -84,13 +77,9 @@ sub{
 table {
     max-width: 100%;
     width: 1000px;
-    
-    /* CHANGE: Reduce top/bottom margin to make it look like one list */
-    margin: 0 auto 0 auto; 
-    
+    margin: 0 auto;
     border-collapse: collapse;
 }
-/* Optional: Add a subtle divider between tables instead of huge space */
 table + table {
     border-top: 1px solid #eee; /* Adds a light line between events */
     margin-top: 12px;           /* Adds a small gap */
@@ -180,11 +169,6 @@ nav.navigation a {
     text-decoration: none;
 }
 
-/* Sponsor Images */
-table.sponsors{width:800px;}
-td.sponsor{white-space:nowrap; width:33%; text-align:center; vertical-align:middle; padding:0px 0px 0px 0px;}
-td.sponsor img{width: 100%}
-
 /* The Table on the Program Page */
 td.room{padding: 4px 12px 4px 4px; width: 90%; vertical-align:bottom; font-size:1.67em; color: #52739e; height:32px;}
 
@@ -224,14 +208,17 @@ td.title,
 td.title-special {
     vertical-align: middle;
 }
-td.speaker{padding: 4px 12px 4px 4px; font-size:1em; max-height:999999px}
-td.speaker:empty {
-    padding: 0;
-    height: 0;
-    line-height: 0;
+
+td.speaker,
+td.abstract {
+    padding: 4px 12px 4px 4px;
+    font-size: 1em;
+}
+td.abstract {
+    padding-bottom: 12px;
 }
 
-td.abstract{padding: 4px 12px 12px 4px; font-size:1em; max-height:999999px}
+td.speaker:empty,
 td.abstract:empty {
     padding: 0;
     height: 0;
@@ -270,7 +257,6 @@ img.center{display:block; width:67%; margin:1em auto 2em auto;}
 /* Poster Images */
 table.posters{width:800px;}
 td.poster{white-space:nowrap; width:50%; text-align:center; vertical-align:middle; padding:0px 0px 0px 0px;}
-td.sponsor img{width: 100%}
 
 footer {
     font-size: 0.875rem;
@@ -324,4 +310,49 @@ footer {
         width: 85%; /* Don't touch the edges */
         border-radius: 8px;
     }
+}
+
+.speaker-profile {
+    display: flex;
+    gap: 2rem;
+    margin-top: 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+}
+.speaker-info h3 { margin-top: 0; color: #b2132e; }
+.speaker-bio { font-size: 1rem; color: #444; }
+
+.speaker-profile:target {
+    background-color: #f3f0e8; 
+    border: 1px solid #b8860b;
+    border-radius: 12px; /* Slightly rounder for a modern look */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    
+    /* FIX FOR TIGHTNESS: Internal Spacing */
+    padding: 3rem;           /* Adds significant breathing room inside the box */
+    margin: 4rem auto;       /* Adds space between this box and others */
+    max-width: 900px;        /* Prevents lines from getting too long/dense */
+    
+    /* Layout Adjustments */
+    transition: all 0.5s ease-in-out;
+    transform: translateY(-10px); /* Moves it up slightly instead of scaling out */
+}
+
+/* Typography fixes for the content inside */
+.speaker-profile h2 {
+    margin-top: 0;
+    line-height: 1.3;
+}
+
+.speaker-bio, .abstract-text {
+    line-height: 1.8;        /* Increases space between lines of text */
+    margin-bottom: 1.5rem;   /* Adds space between paragraphs */
+    text-align: justify;     /* Optional: makes the edges clean like a book */
+    color: #333;
+}
+
+.bio-box {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ccc;
 }
